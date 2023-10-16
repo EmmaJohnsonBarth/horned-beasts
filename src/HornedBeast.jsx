@@ -4,6 +4,7 @@ import React from 'react';
 //from demo code:
 // import Button from 'react-bootstrap/Button';
 import './App.css'
+// import heart from './images/heart.png'
 //need this?:
 // import './index.css'
 
@@ -34,10 +35,11 @@ handleLikes = () => {
             <article>
                 {/* {add props to display} */}
                 <h2>{this.props.title}</h2>
-                <p>{this.state.likes} Likes</p>
-                <p onClick={this.handleLikes}>Click to like this creature</p>
+                {/* <p>{this.state.likes} Likes</p> */}
+                <p className="heart"></p>
+                <p onClick={this.handleLikes}>{'\u2764'} {this.state.likes} Likes </p>
             </article>
-
+            
 
 
                 <img src={this.props.imageURL} alt={this.props.description} title={this.props.title}/>
