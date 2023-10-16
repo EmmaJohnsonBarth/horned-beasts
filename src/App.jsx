@@ -5,7 +5,8 @@ import Header from "./Header.jsx";
 import Footer from "./Footer.jsx"
 import Gallery from "./Gallery.jsx"
 import Modal from "react-bootstrap/Modal"
-import HornedBeast from './HornedBeast';
+import data from "./data.json"
+// import HornedBeast from './HornedBeast';
 
 class App extends React.Component {
 

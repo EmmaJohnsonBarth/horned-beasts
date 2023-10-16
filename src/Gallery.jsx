@@ -3,8 +3,8 @@ import HornedBeast from "./HornedBeast.jsx";
 
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
-
-// Need?: import data from "./data.json"
+// import data from "./data.json"
+import data from "./App.jsx"
 
 class Gallery extends React.Component {
   render() {
