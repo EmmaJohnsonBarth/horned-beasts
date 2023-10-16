@@ -10,11 +10,11 @@ class Gallery extends React.Component {
     let beasties = [];
 
     data.forEach((newCritter, index) => {
-      beasties.push(<HornedBeast 
-      title = {newCritter.title}
-      imageURL = {newCritter.imageURL}
-      description = {newCritter.description}
-      key = {index}
+      beasties.push(<HornedBeast
+        title={newCritter.title}
+        imageURL={newCritter.imageURL}
+        description={newCritter.description}
+        key={index}
       />)
     })
 

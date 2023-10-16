@@ -1,7 +1,6 @@
 //eslint disable?
 
 import React from 'react';
-//from demo code:
 import Button from 'react-bootstrap/Button';
 import './App.css'
 // import heart from './images/heart.png'
@@ -17,6 +16,7 @@ class HornedBeast extends React.Component {
         };
     }
 
+    //arrow function, method that takes an object
     handleLikes = () => {
         this.setState({
             likes: this.state.likes + 1,
@@ -29,6 +29,7 @@ class HornedBeast extends React.Component {
 
     render() {
         return (
+            //between the <>s is a fragment
             <>
                 <article>
                     <h2>{this.props.title}</h2>

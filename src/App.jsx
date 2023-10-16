@@ -1,5 +1,4 @@
-//will have imports, be class-based componenets
-
+//React components/ Dependancies:
 import React from 'react';
 import './App.css';
 import Header from "./Header.jsx";
@@ -17,21 +16,21 @@ class App extends React.Component {
   render() {
 
     return (
-    //app component should render a header, footer, and gallery component
+      //app component should render a header, footer, and gallery component
 
-    //Header:
+      //Header:
 
-    //app component should render a header, footer, and gallery component
-    //Header:
-    <>
+      //app component should render a header, footer, and gallery component
+      //Header:
+      <>
 
-    {/*new thingy*/}
-      <Header />
-      
-      {/* {Main Section Here} */}
-      <Gallery />
-      
-      <Footer />
+        {/*new thingy*/}
+        <Header />
+
+        {/* {Main Section Here} */}
+        <Gallery />
+
+        <Footer />
 
       </>
     )
