@@ -3,13 +3,13 @@
 import React from 'react';
 // import '.App.css';
 import Header from "./Header.jsx";
-// import Footer from "./Footer.jsx"
-// import Gallery from "./Gallery.jsx"
+import Footer from "./Footer.jsx"
+import Gallery from "./Gallery.jsx"
 
 //import header component
 //import the main (html main) componenet
 
-class App extends React.Componenet {
+class App extends React.Component {
 
   //can add functions etc
   //need a return method to see stuff in the browser
@@ -29,9 +29,9 @@ class App extends React.Componenet {
       <Header />
       
       {/* {Main Section Here} */}
-      {/* <Gallery />
+      <Gallery />
       
-      <Footer /> */}
+      <Footer />
 
       </>
     )
