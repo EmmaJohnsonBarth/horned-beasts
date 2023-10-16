@@ -39,11 +39,6 @@ class HornedBeast extends React.Component {
                     <Button variant="primary">Likessss</Button>{' '}
                 </article>
 
-
-
-
-
-
                 <img src={this.props.imageURL} alt={this.props.description} title={this.props.title} />
                 <p>{this.props.description}</p>
                 <p>This is a creature.</p>
