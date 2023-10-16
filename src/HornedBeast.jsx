@@ -1,10 +1,9 @@
-//eslint disable?
-
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import './App.css'
+import data from "./data.json"
+
 // import heart from './images/heart.png'
-//need this?:
 // import './index.css'
 
 class HornedBeast extends React.Component {
