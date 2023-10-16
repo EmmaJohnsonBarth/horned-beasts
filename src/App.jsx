@@ -1,10 +1,10 @@
 //will have imports, be class-based componenets
 
 import React from 'react';
-import '.App.css';
-import Header from " ./Header.jsx"
-import Footer from "./Footer.jsx"
-import Gallery from "./Gallery.jsx"
+// import '.App.css';
+import Header from "./Header.jsx";
+// import Footer from "./Footer.jsx"
+// import Gallery from "./Gallery.jsx"
 
 //import header component
 //import the main (html main) componenet
@@ -29,9 +29,9 @@ class App extends React.Componenet {
       <Header />
       
       {/* {Main Section Here} */}
-      <Gallery />
+      {/* <Gallery />
       
-      <Footer />
+      <Footer /> */}
 
       </>
     )
