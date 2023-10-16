@@ -4,7 +4,7 @@ import React from 'react';
 import '.App.css';
 import Header from " ./Header.jsx"
 import Footer from "./Footer.jsx"
-import Main from "./MainBody.jsx"
+import Gallery from "./Gallery.jsx"
 
 //import header component
 //import the main (html main) componenet
@@ -26,13 +26,13 @@ class App extends React.Componenet {
     <>
 
     {/*new thingy*/}
-      <Header /> Horned Beasts (but not where to find them)
+      <Header />
       
       {/* {Main Section Here} */}
-      <Main />
+      <Gallery />
       
-      <Footer /> by Emma Johnson-Barth
-      
+      <Footer />
+
       </>
     )
   }
