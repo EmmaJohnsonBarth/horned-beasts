@@ -1,11 +1,27 @@
 import React from "react";
 import HornedBeast from "./HornedBeast.jsx";
+import data from "./data.json"
+
 class Gallery extends React.Component {
   render() {
+
+    console.log(data);
+
+    let beasties = [];
+
+    data.forEach((newCritter, index) => {
+      beasties.push(<HornedBeast 
+      title = {newCritter.title}
+      imageURL = {newCritter.imageURL}
+      key = {index}
+      />)
+    })
+
     return (
       <>
         <main>
-          <HornedBeast
+          {{beasties}
+          /* <HornedBeast
             title="UniWhal"
             imageUrl="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg"
             description="A unicorn and a narwhal"
@@ -122,7 +138,7 @@ class Gallery extends React.Component {
             title="Smaug"
             imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Smaug_par_David_Demaret.jpg/290px-Smaug_par_David_Demaret.jpg"
             description="Fan illustration of Smaug from 'The Hobbit'"
-          />
+          /> */}
         </main>
       </>
     )
