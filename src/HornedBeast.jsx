@@ -29,7 +29,7 @@ class HornedBeast extends React.Component {
     //pizzaGot in demo code here
 
     helperFunctionH3Click = () => {
-        this.props.handleOnShowModal(this.props.title)
+        this.props.handleOnShowModal(this.props)
     }
 
     render() {

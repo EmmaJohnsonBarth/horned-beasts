@@ -4,8 +4,9 @@ import './App.css';
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx"
 import Gallery from "./Gallery.jsx"
-import Modal from "react-bootstrap/Modal"
+// import Modal from "react-bootstrap/Modal"
 import data from "./data.json"
+import SelectedBeast from './SelectedBeast';
 // import HornedBeast from './HornedBeast';
 
 class App extends React.Component {
@@ -38,15 +39,15 @@ class App extends React.Component {
     })
   };
 
-  handleOnShowModal = (HornedBeast) => {
+  handleOnShowModal = (hornedBeast) => {
     this.setState({
       showModal: true,
-      selectBeast: HornedBeast
+      selectBeast: hornedBeast
     })
   };
 
   render() {
-    console.log("data: ", data)
+    // console.log("data: ", this.state.selectBeast)
     return (
 
       <>
@@ -54,7 +55,7 @@ class App extends React.Component {
         <Header heart={this.state.heart} />
 
         <Gallery
-        data = {data}
+          data={data}
           addHeart={this.addHeart}
 
           //pass unc to Gallery then to HornedBeast to title will invoke arrow func in parent
@@ -63,11 +64,8 @@ class App extends React.Component {
 
         <Footer />
 
-        <Modal show={this.state.showModal} onHide={this.handeOnHide}>
-          <Modal.Header closeButton>
-            <Modal.Title>{this.state.selectBeast}</Modal.Title>
-          </Modal.Header>
-        </Modal>
+        <SelectedBeast show={this.state.showModel} onHide={this.handleOnHide} selectBeast={this.state.selectBeast} />
+
 
       </>
     )
