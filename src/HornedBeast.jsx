@@ -27,21 +27,17 @@ class HornedBeast extends React.Component {
     //pizzaNeeded in demo code here
     //pizzaGot in demo code here
 
-    //yesterday's stuff:
     render() {
         return (
             <>
-                {/* {name and desc} */}
                 <article>
-                    {/* {add props to display} */}
                     <h2>{this.props.title}</h2>
-                    <p onClick={this.handleLikes}>{'\u2764'} {this.state.likes} Likes </p>
-                    <Button variant="primary">Likessss</Button>{' '}
+                    <p >{'\u2764'} {this.state.likes} Likes </p>
+                    <Button variant="primary" onClick={this.handleLikes}>Like image</Button>
                 </article>
 
                 <img src={this.props.imageURL} alt={this.props.description} title={this.props.title} />
                 <p>{this.props.description}</p>
-                <p>This is a creature.</p>
 
             </>
         )

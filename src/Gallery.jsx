@@ -13,6 +13,7 @@ class Gallery extends React.Component {
       beasties.push(<HornedBeast 
       title = {newCritter.title}
       imageURL = {newCritter.imageURL}
+      description = {newCritter.description}
       key = {index}
       />)
     })
