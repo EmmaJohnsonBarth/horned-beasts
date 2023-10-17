@@ -3,18 +3,19 @@ import HornedBeast from "./HornedBeast.jsx";
 
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
-// import data from "./data.json"
-import data from "./App.jsx"
+
+
 
 class Gallery extends React.Component {
   render() {
 
     // console.log('data: ', data);
 
-    let beasties = [];
+    // let beasties = [];
 
-    data.forEach((newCritter, index) => {
-      beasties.push(
+    //added this.props:
+    let beasties = this.props.data.map((newCritter, index) => {
+      // beasties.push(
       <HornedBeast
         title={newCritter.title}
         imageURL={newCritter.imageURL}
@@ -23,10 +24,9 @@ class Gallery extends React.Component {
         key={index}
         handleOnShowModal = {this.props.handleOnShowModal}
       />
-      );
-    })
+    });
 
-    // console.log('beasties: ', beasties);
+    console.log('beasties: ', this.props.data);
 
     return (
       <>

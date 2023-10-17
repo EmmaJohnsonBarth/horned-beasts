@@ -46,7 +46,7 @@ class App extends React.Component {
   };
 
   render() {
-
+    console.log("data: ", data)
     return (
 
       <>
@@ -54,6 +54,7 @@ class App extends React.Component {
         <Header heart={this.state.heart} />
 
         <Gallery
+        data = {data}
           addHeart={this.addHeart}
 
           //pass unc to Gallery then to HornedBeast to title will invoke arrow func in parent
