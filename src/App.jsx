@@ -64,7 +64,7 @@ class App extends React.Component {
 
         <Footer />
 
-        <SelectedBeast show={this.state.showModel} onHide={this.handleOnHide} selectBeast={this.state.selectBeast} />
+        <SelectedBeast show={this.state.showModal} onHide={this.handleOnHide} selectBeast={this.state.selectBeast} />
 
 
       </>
