@@ -44,19 +44,26 @@ class App extends React.Component {
     let selected = event.target.value;
     console.log("selected, pre-elseIf", selected)
 
-    if (selected === 1) {
+    if (selected === "1") {
       console.log("selected, elseIf:", selected)
-      let filteredChoice = data.filter(horns => { horns === 1 });
+      let filteredChoice = data.filter(item => item.horns === 1 );
+      console.log(filteredChoice)
       this.setState({ sortedData: filteredChoice });
-    } else if (selected === 2) {
-      let filteredChoice = data.filter(horns => { horns === 2 });
+    } else if (selected === "2") {
+      console.log("selected, elseIf:", selected)
+      let filteredChoice = data.filter(item => item.horns === 2 );
+      console.log(filteredChoice)
       this.setState({ sortedData: filteredChoice });
-    } else if (selected === 3) {
-      let filteredChoice = data.filter(horns => { horns === 3 });
+    } else if (selected === "3") {
+      console.log("selected, elseIf:", selected)
+      let filteredChoice = data.filter(item => item.horns === 3 );
+      console.log(filteredChoice)
       this.setState({ sortedData: filteredChoice });
-    } else if (selected === 100) {
-      let filteredChoice = data.filter(horns => { horns === 100 });
-      this.setState({ sortedData: filteredChoice });
+    } else if (selected === "100") {
+      console.log("selected, elseIf:", selected)
+      let filteredChoice = data.filter(item => item.horns === 100 );
+      console.log(filteredChoice)
+      this.setState({ sortedData: filteredChoice});
     }
   };
 
@@ -84,13 +91,10 @@ class App extends React.Component {
 
 
         <Gallery
-          data={data}
+          data={this.state.sortedData}
           addHeart={this.addHeart}
           handleOnShowModal={this.handleOnShowModal}
         />
-
-
-
 
         <Footer />
 
