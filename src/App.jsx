@@ -5,6 +5,7 @@ import Footer from "./Footer.jsx"
 import Gallery from "./Gallery.jsx"
 import data from "./data.json"
 import SelectedBeast from './SelectedBeast';
+import Form from 'react-bootstrap/Form'
 
 class App extends React.Component {
 
@@ -14,6 +15,7 @@ class App extends React.Component {
       heart: "",
       showModal: false,
       selectBeast: "",
+      sortedData: data,
     };
   }
 
@@ -36,24 +38,65 @@ class App extends React.Component {
     })
   };
 
+
+
+  handleSelect = (event) => {
+    let selected = event.target.value;
+    console.log("selected, pre-elseIf", selected)
+
+    if (selected === 1) {
+      console.log("selected, elseIf:", selected)
+      let filteredChoice = data.filter(horns => { horns === 1 });
+      this.setState({ sortedData: filteredChoice });
+    } else if (selected === 2) {
+      let filteredChoice = data.filter(horns => { horns === 2 });
+      this.setState({ sortedData: filteredChoice });
+    } else if (selected === 3) {
+      let filteredChoice = data.filter(horns => { horns === 3 });
+      this.setState({ sortedData: filteredChoice });
+    } else if (selected === 100) {
+      let filteredChoice = data.filter(horns => { horns === 100 });
+      this.setState({ sortedData: filteredChoice });
+    }
+  };
+
+
+
   render() {
-    // console.log("data: ", this.state.selectBeast)
+
     return (
 
       <>
 
         <Header heart={this.state.heart} />
 
+        <Form>
+          <Form.Select
+            name="selected"
+            onChange={this.handleSelect}>
+            <option>How many horns ya want</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="100">One Hundred</option>
+          </Form.Select>
+        </Form>
+
+
         <Gallery
           data={data}
           addHeart={this.addHeart}
-          //pass unc to Gallery then to HornedBeast to title will invoke arrow func in parent
           handleOnShowModal={this.handleOnShowModal}
         />
+
+
+
 
         <Footer />
 
         <SelectedBeast show={this.state.showModal} onHide={this.handleOnHide} selectBeast={this.state.selectBeast} />
+
+
 
       </>
     )
